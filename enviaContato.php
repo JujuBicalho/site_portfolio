@@ -6,21 +6,19 @@ $mensagem = $_POST["mensagem"];
 
 $texto = "
 Nome: $nome
-E-mail: $email
+E-mail:$email
 Mensagem: $mensagem
 ";
 
 // EMAIL PARA O DESTINATARIO
 $emailDestino = "julianabicalhodev@gmail.com";
-$headers .= $nome . $email;
-mail($emailDestino, 'Mensagem enviada pelo site', $texto,);
+$headers .= "From:" . $email;
+mail($emailDestino, 'Conato enviado pelo site', $texto,);
 
 //EMAIL PARA O CLIENTE
-$headers2 .= $nome . $email;
-$texto .= "Olá, tudo bem?";
-"Seu e-mail foi recebido e em breve lhe darei um retorno!";
-"Muito obrigada pelo seu contato.";
-mail($email, 'Mensagem enviada pelo site', $texto);
+$headers2 .= "From:" . $email;
+$texto .= "Seu e-mail foi recebido e breve lhe darei um retorno!Muito obrigada pelo seu contato.";
+mail($email, 'Contato pelo site Juliana Bicalho', $texto);
 
 ?>
 
