@@ -13,7 +13,7 @@ Mensagem: $mensagem
 // EMAIL PARA O DESTINATARIO
 $emailDestino = "julianabicalhodev@gmail.com";
 $headers .= $nome . $email;
-mail($emailDestino, 'Teste de E-mail', $texto,);
+mail($emailDestino, 'Mensagem enviada pelo site', $texto,);
 
 //EMAIL PARA O CLIENTE
 $headers2 .= $nome . $email;
